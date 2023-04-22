@@ -1,7 +1,6 @@
 // Important modules this config uses
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
 const { HashedModuleIdsPlugin } = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -95,16 +94,6 @@ module.exports = require('./webpack.base.babel')({
       test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
       minRatio: 0.8
-    }),
-
-    new WebpackPwaManifest({
-      name: 'Innoneo',
-      short_name: 'Innoneo',
-      description: 'Innoneo',
-      background_color: '#c11b0f',
-      theme_color: '#c11b0f',
-      inject: true,
-      ios: true
     }),
 
     new HashedModuleIdsPlugin({

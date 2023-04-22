@@ -13,8 +13,8 @@
   "author": "",
   "scripts": {
     "prebuild": "npm run build:clean",
-    "build": "npm run assets:build && cross-env webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
-    "build:clean": "rimraf ./build app/.icons",
+    "build": "cross-env webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build:clean": "rimraf ./build",
     "start": "node server",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
